@@ -31,6 +31,7 @@ def hilite_me(code, lexer, options, style, linenos, divstyles):
                               noclasses=True,
                               cssclass='',
                               cssstyles=defstyles + divstyles,
+                              lineseparator='<br>',
                               prestyles='margin: 0')
     html = highlight(code, get_lexer_by_name(lexer, **options), formatter)
     if linenos:
